@@ -1,3 +1,7 @@
+{{ config(
+    materialized='table'
+) }}
+
 select o.customer_id,
 c.name,
 c.email,
