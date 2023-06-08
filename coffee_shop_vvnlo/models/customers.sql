@@ -11,4 +11,3 @@ from `analytics-engineers-club.coffee_shop.orders` o
 left join `analytics-engineers-club.coffee_shop.customers` c on o.customer_id = c.id
 group by 1, 2, 3
 order by min(o.created_at)
-limit 5
