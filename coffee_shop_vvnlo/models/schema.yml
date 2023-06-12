@@ -10,13 +10,13 @@ sources:
           - name: id
             tests:
               - unique
-              - not null
+              - not_null
       - name: orders
         columns:
           - name: id
             tests:
               - unique
-              - not null
+              - not_null
 
 models:
   - name: customers
@@ -26,6 +26,6 @@ models:
         description: Primary key of the model
         tests:
           - unique
-          - not null
+          - not_null
   - name: monthly_customers
     description: Monthly count of new customers by first_order_at from customers model
