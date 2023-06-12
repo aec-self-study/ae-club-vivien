@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: coffee_shop
+    project: analytics-engineers-club
+    description: Sample dataset from AEC for hypothetical coffee roaster online business
+    tables:
+      - name: customers
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not null
+      - name: orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not null
+
+models:
+  - name: customers
+    description: Cleaned up data for our customers
+    columns:
+      - name: customer_id
+        description: Primary key of the model
+        tests:
+          - unique
+          - not null
+  - name: monthly_customers
+    description: Monthly count of new customers by first_order_at from customers model
