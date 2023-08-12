@@ -9,3 +9,7 @@ models:
           - not_null
   - name: monthly_customers
     description: Monthly count of new customers by first_order_at from customers model
+  - name: weekly_revenue_by_category
+    description: Weekly total of order revenue by product category
+  - name: weekly_revenue_by_new_vs_returning
+    description: Weekly total of order revenue by new and returning customers
