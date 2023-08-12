@@ -15,3 +15,47 @@ models:
         tests:
           - unique
           - not_null
+  - name: stg_bigquery__order_items
+    description: Cleaned up data for our order items
+    columns:
+      - name: order_item_id
+        description: Primary key of the model
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: Foreign key joining order items to the order
+        tests:
+          - not_null
+      - name: product_id
+        description: Foreign key joining order items to the product
+        tests:
+          - not_null
+  - name: stg_bigquery__products
+    description: Cleaned up data for our products
+    columns:
+      - name: product_id
+        description: Primary key of the model
+        tests:
+          - unique
+          - not_null
+  - name: stg_bigquery__product_prices
+    description: Cleaned up data for our product prices
+    columns:
+      - name: product_price_id
+        description: Primary key of the model
+        tests:
+          - unique
+          - not_null
+      - name: product_id
+        description: Foreign key joining product price intervals to the product
+        tests:
+          - not_null
+      - name: product_price
+        description: Prices of the product during specified time intervals
+        tests:
+          - not_null
+      - name: created_at
+        description: Beginning of a specified time interval when a product price is effective
+        tests:
+          - not_null
