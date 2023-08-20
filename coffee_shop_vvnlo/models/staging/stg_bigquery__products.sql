@@ -10,7 +10,7 @@ renamed as (
         id as product_id,
         -- strings
         name as product_name,
-        category,
+        category as product_category,
         -- timestamps
         created_at
     from source
