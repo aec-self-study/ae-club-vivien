@@ -15,7 +15,7 @@ models:
         description: Foreign key to the products model
         tests:
           - not_null
-      - name: product_price
-        description: Price of product from the product_prices model, based on sold_at date from the orders model
+      - name: amount
+        description: Price when item was sold; product price from the product_prices model, based on sold_at date from the orders model
         tests:
           - not_null

@@ -6,7 +6,7 @@ select
     oi.product_id,
     p.product_name,
     p.product_category,
-    pp.product_price
+    pp.product_price as amount
 from {{ ref('stg_bigquery__orders') }} o 
 left join {{ ref('stg_bigquery__order_items') }} oi on o.order_id = oi.order_id
 left join {{ ref('stg_bigquery__products') }} p on oi.product_id = p.product_id
