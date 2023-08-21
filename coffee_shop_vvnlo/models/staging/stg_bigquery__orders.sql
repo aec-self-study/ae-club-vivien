@@ -16,7 +16,7 @@ renamed as (
         -- numerics
         total as order_total,
         -- timestamps
-        created_at
+        created_at as sold_at
     from source
 )
 

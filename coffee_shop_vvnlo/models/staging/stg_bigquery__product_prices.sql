@@ -12,7 +12,7 @@ renamed as (
         -- numerics
         price as product_price,
         -- timestamps
-        created_at,
+        created_at as started_at,
         ended_at
     from source
 )

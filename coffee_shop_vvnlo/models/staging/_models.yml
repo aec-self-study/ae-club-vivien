@@ -55,7 +55,7 @@ models:
         description: Prices of the product during specified time intervals
         tests:
           - not_null
-      - name: created_at
+      - name: started_at
         description: Beginning of a specified time interval when a product price is effective
         tests:
           - not_null
