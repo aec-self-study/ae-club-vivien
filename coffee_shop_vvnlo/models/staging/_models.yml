@@ -47,6 +47,10 @@ models:
         tests:
           - unique
           - not_null
+          - dbt_utils.mutually_exclusive_ranges:
+              lower_bound: started_at
+              upper_bound: ended_at
+              gaps: not_allowed
       - name: product_id
         description: Foreign key joining product price intervals to the product
         tests:
