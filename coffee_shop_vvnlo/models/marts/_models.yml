@@ -1,17 +1,17 @@
 models:
   - name: customers
-    description: Cleaned up data for our customers
+    description: "Cleaned up data for our customers"
     columns:
       - name: customer_id
-        description: Primary key of the model
+        description: "Primary key of the model"
         tests:
           - unique
           - not_null
   - name: monthly_customers
-    description: Monthly count of new customers by first_order_at from customers model
+    description: "Monthly count of new customers by first_order_at from customers model"
   - name: weekly_revenue_by_category
-    description: Weekly total of order revenue by product category
+    description: "Weekly total of order revenue by product category"
   - name: weekly_revenue_by_new_vs_returning
-    description: Weekly total of order revenue by new and returning customers
+    description: "Weekly total of order revenue by new and returning customers"
   - name: monthly_revenue_by_category
-    description: Monthly total of order revenue by product category
+    description: "Monthly total of order revenue by product category"
