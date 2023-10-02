@@ -43,9 +43,9 @@ models:
     description: Cleaned up data for our product prices
     tests:
       - dbt_utils.mutually_exclusive_ranges:
-        lower_bound_column: started_at
-        upper_bound_column: ended_at
-        gaps: not_allowed
+          lower_bound_column: started_at
+          upper_bound_column: ended_at
+          gaps: not_allowed
     columns:
       - name: product_price_id
         description: Primary key of the model
