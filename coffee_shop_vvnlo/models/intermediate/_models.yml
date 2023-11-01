@@ -1,5 +1,5 @@
 models:
-  - name: int_item_sales.sql
+  - name: int_item_sales
     description: "Order details joined to product details and pricing"
     columns:
       - name: order_item_id
@@ -19,7 +19,7 @@ models:
         description: "Price when item was sold; product price from the product_prices model, based on sold_at date from the orders model"
         tests:
           - not_null
-  - name: int_date.sql
+  - name: int_date
     description: "table of dates from January 1, 2021 to December 31, 2022"
     columns:
       - name: date
