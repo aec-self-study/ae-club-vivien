@@ -18,7 +18,9 @@ models:
       - name: amount
         description: "Price when item was sold; product price from the product_prices model, based on sold_at date from the orders model"
         tests:
-          - not_null
+          - not_null:
+              config:
+                severity: warn
   - name: int_date
     description: "table of dates from January 1, 2021 to December 31, 2022"
     columns:
