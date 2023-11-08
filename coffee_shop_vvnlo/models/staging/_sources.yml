@@ -50,6 +50,7 @@ sources:
           - name: price
             tests:
               - not_null
+              - less_than_zero
           - name: created_at
             tests:
               - not_null
