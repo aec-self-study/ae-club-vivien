@@ -11,6 +11,9 @@ sources:
             tests:
               - unique
               - not_null
+          - name: email
+            tests:
+              - email_format
       - name: orders
         columns:
           - name: id
@@ -47,6 +50,7 @@ sources:
           - name: price
             tests:
               - not_null
+              - less_than_zero
           - name: created_at
             tests:
               - not_null
