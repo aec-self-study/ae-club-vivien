@@ -54,3 +54,7 @@ sources:
           - name: created_at
             tests:
               - not_null
+  - name: web_tracking
+    project: analytics-engineers-club
+    tables:
+      - name: pageviews
