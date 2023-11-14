@@ -38,6 +38,8 @@ models:
         description: "common visitor_id per known customer"
         tests:
           - not_null
+          - unique_mapping:
+              map_by_column_name: customer_id
       - name: web_tracking_ts
         description: "timestamp of visit to web page"
         tests:
