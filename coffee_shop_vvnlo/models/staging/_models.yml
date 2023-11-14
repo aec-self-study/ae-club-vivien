@@ -65,3 +65,22 @@ models:
         description: "Beginning of a specified time interval when a product price is effective"
         tests:
           - not_null
+  - name: stg_bigquery__webtracking
+    columns:
+      - name: web_tracking_id
+        description: "Primary key of the model"
+        tests:
+          - unique
+          - not_null
+      - name: visitor_id
+        description: "ID of web visitor"
+        tests:
+          - not_null
+      - name: page
+        description: "URL of web page visitied"
+        tests:
+          - not_null
+      - name: web_tracking_ts
+        description: "timestamp of visit to web page"
+        tests:
+          - not_null

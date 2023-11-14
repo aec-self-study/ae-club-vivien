@@ -26,3 +26,19 @@ models:
     columns:
       - name: date
         description: "date per day; primary key of the date model"
+  - name: int_user_stitching
+    description: "pageviews with visitor_id stitched to single common visitor_id by customer_id"
+    columns:
+      - name: web_tracking_id
+        description: "Primary key of the model"
+        tests:
+          - unique
+          - not_null
+      - name: visitor_id_stitched
+        description: "common visitor_id per known customer"
+        tests:
+          - not_null
+      - name: web_tracking_ts
+        description: "timestamp of visit to web page"
+        tests:
+          - not_null
