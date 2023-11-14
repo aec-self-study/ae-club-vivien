@@ -9,7 +9,7 @@ with id_map as (
 
 select 
     w.web_tracking_id,
-    im.visitor_id_stitched,
+    ifnull(im.visitor_id_stitched, w.visitor_id) as visitor_id_stitched,
     w.customer_id,
     w.device_type,
     w.page,
