@@ -44,3 +44,19 @@ models:
         description: "timestamp of visit to web page"
         tests:
           - not_null
+  - name: int_ice_cream_flavor_per_day
+    description: "Latest Favourite Ice Cream record per day"
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: github_username
+        tests:
+          - not_null
+      - name: favorite_ice_cream_flavor
+        tests:
+          - not_null
+      - name: dbt_scd_id
+        tests:
+          - unique
+          - not_null

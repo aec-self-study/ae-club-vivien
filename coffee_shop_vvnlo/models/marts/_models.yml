@@ -15,3 +15,5 @@ models:
     description: "Weekly total of order revenue by new and returning customers"
   - name: monthly_revenue_by_category
     description: "Monthly total of order revenue by product category"
+  - name: daily_favorite_ice_cream_flavors
+    description: "Favorite ice cream flavor submitted by Github users over time"
