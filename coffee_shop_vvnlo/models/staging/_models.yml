@@ -84,3 +84,17 @@ models:
         description: "timestamp of visit to web page"
         tests:
           - not_null
+  - name: stg_bigquery__favorite_ice_cream_flavors
+    columns:
+      - name: github_username
+        tests:
+          - not_null
+      - name: favorite_ice_cream_flavor
+        tests:
+          - not null
+      - name: created_at
+        tests:
+          - not null
+      - name: updated_at
+        tests:
+          - not null
