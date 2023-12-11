@@ -28,14 +28,32 @@ def sq_int(x):
     y = x**2
     return y
 
-from sympy import *
+def is_even(x):
+    return x % 2 == 0
+
+def is_odd(x):
+    return x % 2 != 0
 
 y = 5
 x = 4
 def describe_evenness(x):
-    if simplify(x).is_even:
+    if is_even(x):
         print("It's even!")
-    elif simplify(x).is_odd:
+    elif is_odd(x):
         print("It's odd!")
     else:
         print("It's neither even nor odd!")
+
+f = 0
+i = list(cal_lookup)
+while f < len(cal_lookup):
+    print(cal_lookup[i[f]])
+    f += 1
+
+for j in range(len(my_first_list)):
+    if isinstance(my_first_list[j], (int, float, complex)):
+        my_first_list[j] = my_first_list[j]**2
+    elif my_first_list[j] in i:
+        print(cal_lookup[my_first_list[j]])
+    else:
+        pass
