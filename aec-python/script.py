@@ -57,3 +57,8 @@ for j in range(len(my_first_list)):
         print(cal_lookup[my_first_list[j]])
     else:
         pass
+
+def sq_cal(x):
+    i = list(x)
+    for f in range(len(i)):
+        print(x[i[f]]**2)
