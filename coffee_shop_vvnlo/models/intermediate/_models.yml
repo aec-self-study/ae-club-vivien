@@ -69,6 +69,31 @@ models:
       - name: session_end_time
         tests:
           - not_null
+    - name: int_pageview_sessions_4h
+      description: "pageviews with session IDs based on 4 hour interval"
+      columns:
+        - name: web_tracking_id
+          description: "Primary key of the model"
+          tests:
+            - unique
+            - not_null
+        - name: visitor_id
+          tests:
+            - not_null
+        - name: web_tracking_ts
+          description: "timestamp of visit to web page"
+          tests:
+            - not_null
+        - name: session_id
+          description: "session ID per new session"
+          tests:
+            - not_null
+        - name: session_start_time
+          tests:
+            - not_null
+        - name: session_end_time
+          tests:
+            - not_null
   - name: int_ice_cream_flavor_per_day
     description: "Latest Favourite Ice Cream record per day"
     columns:
