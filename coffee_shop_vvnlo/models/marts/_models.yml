@@ -17,5 +17,3 @@ models:
     description: "Monthly total of order revenue by product category"
   - name: daily_favorite_ice_cream_flavors
     description: "Favorite ice cream flavor submitted by Github users over time"
-  - name: sessions_purchase_metadata
-    description: "Summary metadata about web shop pageview sessions"
