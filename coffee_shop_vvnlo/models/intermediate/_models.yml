@@ -22,10 +22,15 @@ models:
               config:
                 severity: warn
   - name: int_date
-    description: "table of dates from January 1, 2021 to December 31, 2022"
+    description: "table of dates from December 27, 2020 to current day"
     columns:
       - name: date
         description: "date per day; primary key of the date model"
+  - name: int_date_week
+    description: "table of weekly dates from December 27, 2020 to current day"
+    columns:
+      - name: date_week
+        description: "date per week; primary key of the date model"
   - name: int_user_stitching
     description: "pageviews with visitor_id stitched to single common visitor_id by customer_id"
     columns:
