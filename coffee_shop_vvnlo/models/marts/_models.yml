@@ -19,3 +19,5 @@ models:
     description: "Favorite ice cream flavor submitted by Github users over time"
   - name: sessions_purchase_metadata
     description: "Summary metadata about web shop pageview sessions"
+  - name: weekly_customer_ltv
+    description: "Sparse matrix of weekly revenue/value per customer"
