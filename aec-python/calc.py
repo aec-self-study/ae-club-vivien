@@ -1,5 +1,6 @@
 import argparse
 
+
 def aec_subtract(ints_to_sub):
     if len(ints_to_sub) != 2:
         raise Exception("Can only be run with 2 integers")
@@ -10,6 +11,7 @@ def aec_subtract(ints_to_sub):
         our_sub = 0
     print(f"The subtracted result is {our_sub}")
     return our_sub
+
 
 def aec_divide(ints_to_div):
     if len(ints_to_div) != 2:
@@ -24,23 +26,24 @@ def aec_divide(ints_to_div):
         print(f"The quotient is {our_div}")
     return our_div
 
-parser = argparse.ArgumentParser(description = "CLI calculator")
+
+parser = argparse.ArgumentParser(description="CLI calculator")
 subparsers = parser.add_subparsers(help="sub-command help", dest="command")
 
 add = subparsers.add_parser("add", help="add integers")
-add.add_argument("ints_to_sum", nargs='*', type=int)
+add.add_argument("ints_to_sum", nargs="*", type=int)
 sub = subparsers.add_parser("sub", help="subtract integers")
 sub.add_argument("ints_to_sub", nargs=2, type=int)
 mult = subparsers.add_parser("mult", help=" multiply integers")
-mult.add_argument("ints_to_mult", nargs='*', type=int)
+mult.add_argument("ints_to_mult", nargs="*", type=int)
 div = subparsers.add_parser("div", help="divide integers")
-div.add_argument("ints_to_div", nargs='*', type=int)
+div.add_argument("ints_to_div", nargs="*", type=int)
 
 if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.command == "add":
-        our_sum = sum(args.ints_to_sum) 
+        our_sum = sum(args.ints_to_sum)
         print(f"The sum of values is {our_sum}")
     if args.command == "sub":
         aec_subtract(args.ints_to_sub)
